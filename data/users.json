@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Ashima",
+    "email": "ashima0061.be23@chitkara.edu.in",
+    "password": "$2b$10$wyUi.ZRCnbJuD7hYf7XTl./tY8t8yvSbD9XW4iLkxoNHy/AsrT4mO",
+    "role": "user"
+  },
+  {
+    "name": "Ashima Kamboj",
+    "email": "ashimakamboj27@gmail.com",
+    "password": "$2b$10$GwO446XvDXoRoraNJW.Zk.wW1RcS9zRfbqPsHPRMruO0YskPZCOne",
+    "role": "user"
+  },
+  {
+    "name": "abcd",
+    "email": "abcd@gmail.com",
+    "password": "$2b$10$9YCWHkpzPbBR/7oIiHgOVOL5Iai3EibnBGU/fuMQz2zAqm0hGMw0a",
+    "role": "user"
+  },
+  {
+    "name": "Ashima Kamboj",
+    "email": "ashima@gmail.com",
+    "password": "$2b$10$qvi4TtpemL5vPhHEkmcoz.vfa.xd/Tdpc5Z/683HlGIdWzI6R6EUG",
+    "role": "user"
+  },
+  {
+    "name": "Ashima",
+    "email": "monika@gmail.com",
+    "password": "$2b$10$nYU53UTA1b7kZXJed7yjm.JMNZuRGnC2Qg9MvC/PgNnVRzip/1VfS",
+    "role": "admin"
+  },
+  {
+    "name": "Sakshi",
+    "email": "sakshi@gmail.com",
+    "password": "$2b$10$r18ewMIVOTx6ofPtg6SSfOX1tOLShv9Lg.pczlYEV7Za27UY243ga",
+    "role": "user"
+  },
+  {
+    "name": "lavish",
+    "email": "lavish@gmail.com",
+    "password": "$2b$10$2ALaYn7vkD.MVbIZuJZ0FeN/4FMf4bY5nb/1JwBzCjVGBH7xPRAQy",
+    "role": "user"
+  },
+  {
+    "name": "new",
+    "email": "new@gmail.com",
+    "password": "$2b$10$oMGqVK71hsquBAcLYz9A7O5je6Rk6s456jK/SfkRKAUiC4YEq5XMS",
+    "role": "admin"
+  },
+  {
+    "name": "Aniket",
+    "email": "aniket@gmail.com",
+    "password": "$2b$10$fSpEFXGvckTGehJGxIysBOdn1tfIJans7uxDjbDnbT4xuTiVpSUUO",
+    "role": "user"
+  }
+]
