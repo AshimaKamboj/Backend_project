@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages</title>
+    <link rel="stylesheet" href="package.css">
+    <script src="package.js" defer></script>
+</head>
+<body>
+    <header>
+        <center><h1>Explore Our Travel Packages</h1></center>
+    </header>
+
+    <section class="packages">
+        <!-- Package 1 -->
+        <div class="package-card">
+            <img src="https://wallpaperaccess.com/full/359978.jpg" alt="Beach Getaway" />
+            <h3>Bali, Indonesia</h3>
+            <p>Enjoy a 7-day beach vacation !!</p>
+            <span class="price">50,000</span><br>
+            <button class="btn" onclick="openBookingPopup('Bali, Indonesia')">Book Now</button>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="package-card">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/70/2b/91/justa-birding-dharamshala.jpg?w=1100&h=-1&s=1" alt="Mountain Retreat" />
+            <h3>Dharamshala, Himachal Pradesh</h3>
+            <p>Relax in the mountains with this exclusive package.!!</p>
+            <span class="price">22,000</span><br>
+            <button class="btn" onclick="openBookingPopup('Dharamshala, Himachal Pradesh')">Book Now</button>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="package-card">
+            <img src="https://wallpapercave.com/wp/wp8802604.jpg" alt="City Explorer" />
+            <h3>Belgium</h3>
+            <p>Discover the best attractions with our city tour package.</p>
+            <span class="price">1,20,000</span><br>
+            <button class="btn" onclick="openBookingPopup('Belgium')">Book Now</button>
+        </div>
+
+        <!-- Package 4 -->
+        <div class="package-card">
+            <img src="https://wellnessloka.com/uploads/customers/gallery/25691568152979-forest-duplex-2.jpg" alt="City Explorer" />
+            <h3>Sitram Mountain Treat, Munnar</h3>
+            <p>Discover the best attractions with our city tour package.</p>
+            <span class="price">44,000</span><br>
+            <button class="btn" onclick="openBookingPopup('Sitram Mountain Treat, Munnar')">Book Now</button>
+        </div>
+
+        <!-- Package 5 -->
+        <div class="package-card">
+            <img src="https://wallpaperaccess.com/full/5532303.jpg" alt="City Explorer" />
+            <h3>Maldives</h3>
+            <p>Discover the best attractions with our city tour package.</p>
+            <span class="price">1,00,000</span><br>
+            <button class="btn" onclick="openBookingPopup('Maldives')">Book Now</button>
+        </div>
+
+        <!-- Package 6 -->
+        <div class="package-card">
+            <img src="https://www.goatsontheroad.com/wp-content/uploads/2020/02/sunset-on-oia-greece.jpg" alt="City Explorer" />
+            <h3>Santorini, Greece</h3>
+            <p>Discover the best attractions with our city tour package.</p>
+            <span class="price">2,00,000</span><br>
+            <button class="btn" onclick="openBookingPopup('Santorini, Greece')">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Booking Popup -->
+    <div id="booking-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h1>Book Your Package</h1>
+            <form id="booking-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="contact" placeholder="Your Contact Number" required>
+                <input type="number" id="people" placeholder="Number of People" required><br>
+                <input type="hidden" id="destination">
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

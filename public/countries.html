@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEGO</title>
+    <link rel="icon" type="image/x-icon" href="./images/1_1_-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/c4f4b85230.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Georgia, serif;
+    }
+    body
+    {
+        overflow-x: hidden;
+    }
+    .nav{
+        width: 95vw;
+        height: 7vh;
+        border-radius: 50px;
+        border-style:groove;
+        display: grid;
+        grid-template-columns: 9vw auto 33vw;
+        justify-items:center ;
+        background-color: #ffffff;
+        margin-bottom: 50px;
+        margin-top:30px;
+
+    }
+    .nav a{
+        text-decoration: none;
+        color:#545454
+    }
+  .nav.underline{
+        border-style: none;
+    }
+    .nav a:hover{
+        color: #5ce1e6;
+        text-decoration: dotted;
+    }
+    .function{
+        width: 35vw;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 11px;
+        justify-self: end;
+    }
+    .logo{
+        width: 7vw;
+        height: 7vh;
+        padding-top: 3px;
+        text-align: left;
+        padding-left: 20px;
+       
+
+    }
+    .INPUT{
+        width: 55VW;
+        height: 7VH;
+        background:#ffffff ;
+        border-style: hidden;
+
+    }
+    .SERCH{
+        width: 40VW;
+        height: 6VH;
+        background: #ffffff;
+        border-style: hidden;
+        
+        
+
+    }
+    .logodown {
+  position: relative;
+  display: inline-block;
+}
+
+.logodown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 90px;
+  max-height:110px ;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.logodown:hover .logodown-content {
+  display: block;
+}
+.container-card
+{
+    height:800px;
+    width:900px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+   grid-gap:10px 10px;
+    align-self: center;
+    margin-top:7%;
+    margin-left:180px;
+  
+
+}
+.container-card .card
+{
+  background:rgb(165, 57, 111);
+        height:380px;
+        width:280px;
+        text-align:center;
+        font-size:20px;
+        border:2px solid rgb(197, 48, 205);
+        background-repeat: no-repeat;
+    background-size: cover;
+    transition:all 0.5s ease-in-out;
+    box-shadow:0px 7px 10px rgba(0,0,0,0.5);
+}
+.container-card .card:hover
+{
+  transform:translateY(20px);
+}
+.container-card .card:before
+{
+  content:"";
+  position:Absolute;
+  top:0;
+  left:0;
+  display:block;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom,rgba(2, 42, 63, 0.5),rgb(129, 213, 221));
+  z-index:2;
+  transition:0.5s all;
+  opacity:0;
+}
+.container-card .card:hover:before
+{
+  opacity: 1;
+}
+.container-card .card img
+{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+}
+.container-card .card .info
+{
+  position:relative;
+  margin-top:50%;
+  z-index:3;
+  color:#fff;
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.5s all;
+}
+.container-card .card:hover .info
+{
+  opacity:1;
+  transform:translateY(0px);
+}
+.container-card .card .info h1
+{
+  margin:0;
+}
+.container-card .card .info p
+{
+  font-size:18px;
+}
+.container-card .card .info .btn
+{
+  text-decoration: none;
+  background:rgb(0, 5, 5);
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.4s ease-in-out;
+  color:white;
+
+}
+.call-to-action {
+    background-color: #e6cfcf;
+    padding: 30px;
+    text-align: center;
+    margin-top:50px;
+}
+
+.call-to-action h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+.call-to-action .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height:50px;
+    margin-bottom: 15px; 
+}
+
+.call-to-action .button {
+    background-color: rgb(64, 106, 112);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.call-to-action .button:hover {
+    background-color: #211313; 
+}
+
+.call-to-action .social-media {
+    margin-top: 20px;
+}
+
+.call-to-action .social-media p {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.call-to-action .social-media a {
+    color: #0c5c5c;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.social p
+{
+  font-size:20px;
+}
+.review {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-container {
+            max-width: 1120px;
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .slide-content {
+            margin: 0 40px;
+        }
+
+        .card-wrapper {
+            display: flex;
+            justify-content: space-between; 
+            gap: 20px;
+        }
+
+        .card {
+            border-radius: 25px;
+            background: #FFF;
+            width: 30%; 
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+
+        .image-content,
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 14px;
+        }
+
+        .image-content {
+            row-gap: 5px;
+            position: relative;
+            padding: 25px 0;
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color:rgb(64, 106, 112);
+            border-radius: 25px 25px 0 25px;
+        }
+
+        .overlay::before,
+        .overlay::after {
+            content: '';
+            position: absolute;
+            height: 40px;
+            right: 0;
+            bottom: -40px;
+            width: 40px;
+            background-color:rgb(64, 106, 112);
+        }
+
+        .overlay::after {
+            border-radius: 0 25px 0 0;
+            background-color: #fff;
+        }
+
+        .card-image {
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background: #FFF;
+            padding: 3px;
+        }
+
+        .card-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgb(64, 106, 112);
+        }
+
+        .name {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #707070;
+            text-align: center;
+        }
+
+        .stars {
+            margin-top: 8px;
+            color: gold;
+            font-size: 1.8rem;
+        }
+        .star-container {
+    width: 400px;
+    background: rgb(64, 106, 112);
+    padding: 20px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.star-widget {
+    display: flex; /* Display stars inline */
+}
+
+.star-widget input {
+    display: none; /* Hide radio buttons */
+}
+
+.star-widget label {
+    font-size: 1.8rem;
+    color: rgb(255, 253, 253); 
+    padding: 10px;
+    cursor: pointer; 
+    transition: all 0.2s ease;
+}
+
+form .textarea
+{
+    height:100px;
+    width:100%;
+ 
+  
+}
+form .textarea textarea
+{
+    height:100%;
+    width:100%;
+    outline:none;
+    border:1px solid #333;
+    background:rgb(206, 202, 202);
+    padding:10px;
+    font-size:17px;
+    color:rgb(14, 1, 1);
+    resize:none;
+}
+form .btn
+{
+    height:50px;
+    width:100%;
+    margin:15px 0;
+}
+form .btn button
+{
+    height:100%;
+    width:100%;
+    border:1px solid #444;
+    outline:none;
+    background:#222;
+    color:white;
+    font-size:17px;
+    font-weight:500;
+    text-transform:uppercase;
+    cursor:pointer;
+    border-radius: 10px;
+} 
+form .btn button:hover
+{
+    background:#1b1b1b;
+    
+}
+@media (max-width: 768px) {
+  .container-card {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+@media (max-width: 480px) {
+  .container-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.category {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #050000;
+}
+
+.filter-container {
+  margin-bottom: 20px;
+  display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+.video-button {
+    position: relative;
+      width: 350px; 
+    height: 300px; 
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: ease-in-out;
+   }
+   .video-button:hover
+   {
+    transform:scale(1.02);
+   }
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 0; 
+}
+.filter-btn {
+    position: relative;
+    z-index: 1; 
+    color: white; 
+    background: transparent; 
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 16px; 
+    cursor: pointer; 
+    outline: none; 
+}
+
+
+.destinations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.destination {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 240px;
+  display: none; 
+}
+
+.destination h2 {
+  margin: 0;
+  color: #4CAF50;
+}
+
+.country_card{
+            background-color: rgb(95, 156, 147);
+            transition: 1s ease;
+            border-radius:10px;
+         
+        }
+        .country_card:hover{
+            transform: scale(1.1);
+        }
+        .country_name{
+            padding: 10px;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
+            color: black;
+            font-size: 15px;
+            font-family: 'Poppins';
+        }
+        .country_name i{
+            font-size: 20px;
+        }
+        .pin{
+            font-size: 60px;
+            margin: 20px;
+            color: #03515c;
+        }
+        .country_name span
+        {
+          color:white;
+          font-size:16px;
+        }
+.category h1
+{
+    font-size:3rem;
+    margin-top:100px;
+    margin-bottom:80px;
+}
+.category .explore-text
+{
+    flex: 1;
+    text-align: center;
+    font-size:2rem;
+    margin-bottom:40px;
+}
+</style>
+</head>
+<body>
+  <center>
+    <Div class="nav" >
+        <div class="logodown">
+            
+        <div class="logo">
+            <img src="./images/1_1_-removebg-preview.png" height="37px">
+
+        </div>
+        <div class="logodown-content">
+            <p><a  class="about" href="about us.html">About Us</a></p>
+            <p><a class="about" href="">Contact Us</a></p>
+            <p><a class="about" href="">about flego</a></p>
+            </div>
+          </div>
+        <DIV CLASS="INPUT">
+            <INPUT placeholder="serch destination" CLASS="SERCH">
+        </DIV>
+        <div class="function">
+            <div class="underline"><a  href="./hot.html">Hot</a></div>
+                <div class="underline"><a href="./MAP.HTML">Map</a></div>
+                    <div class="underline"><a  href="#">Planing</a></div>
+                        <div class="underline" id="produce"><a  href="produce.html">Upcoming</a></div>
+        </div>
+
+    </Div>
+    </center>
+<section class="grid-card" id="destinations">
+<h1 class="text-uppercase fw-semibold display-1" style="font-size: 3em; text-align:center; margin-bottom:20px; margin-top:20px;">Discover Your Dream Destination</h1>
+<hr class="border-line">
+<div class="container-card">
+<div class="card card1" style="background-image:url(countries/india.jpg)">
+<div class="info">
+<h1>India</h1>
+<p>An island of diverse cultures, stunning landscapes, and ancient history,from bustling cities to serene beaches.</p>
+<a href="india_parallax.html" class="btn">Read More</a>
+</div>
+</div>
+<div class="card " style="background-image:url(countries/hongkong.jpg)">
+  <div class="info">
+    <h1>Hongkong</h1>
+    <p>A vibrant metropolis, offers a unique blend of East and West.Explore its bustling streets and admire the iconic skyline.</p>
+    <a href="hongkong_parallax.html" class="btn">Read More</a>
+    </div>
+</div>
+<div class="card " style="background-image:url(countries/paris1.jpg)">
+  <div class="info">
+    <h1>Paris</h1>
+    <p>City of Lights, the romantic capital of France, is a city steeped in history and culture.</p>
+    <a href="paris_parallax.html" class="btn">Read More</a>
+    </div>
+</div>
+<div class="card " style="background-image:url(countries/mountfuji.jpg)">
+  <div class="info">
+    <h1>Japan</h1>
+<p>An island nation in East Asia, is renowned for its rich culture, technological advancements, and stunning natural beauty.</p>
+    <a href="japan_parallax.html" class="btn">Read More</a>
+    </div>
+</div>
+<div class="card " style="background-image:url(countries/maldives.png)">
+  <div class="info">
+    <h1>Maldives</h1>
+    <p>A tropical heaven, in the Indian Ocean, is renowned for its pristine beaches, crystal-clear waters, and luxurious resorts.</p>
+    <a href="maldives_parallax.html" class="btn">Read More</a>
+    </div>
+</div>
+<div class="card" style="background-image:url(countries/dubai.png)">
+  <div class="info">
+    <h1>Dubai</h1>
+    <p>A vibrant city in the United Arab Emirates,known for its luxurious lifestyle, stunning architecture, and innovative attractions.</p>
+    <a href="dubai_parallax.html" class="btn">Read More</a>
+    </div>
+</div>
+<div class="card " style="background-image:url(countries/santorini.jpg)">
+  <div class="info">
+    <h1>Santorini</h1>
+    <p>A Greek island in the Cyclades archipelago, is renowned for its stunning caldera, picturesque villages, and breathtaking sunsets.</p>
+    <a href="santorini_parallax.html" class="btn">Read More</a>
+    </div>
+</div>
+<div class="card " style="background-image:url(countries/iceland.jpg)">
+  <div class="info">
+    <h1>Iceland</h1>
+    <p>For offbeat travellers,a realm of stark contrasts, beckons the offbeat traveller with its fiery volcanoes and glacial landscapes..</p>
+    <a href="iceland_parallax.html" class="btn">Read More</a>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="category">
+    <h1>From bustling cities to serene beaches, there's something for everyone.</h1>
+    <hr class="border-line">
+
+    <div class="explore-text">Click and explore more destinations by category:<Br></div>
+    
+      <div class="filter-container">
+     
+       <div class="video-button">
+           <video autoplay loop muted class="video-bg">
+               <source src="country/slideshow.mp4" type="video/mp4">
+             
+           </video>
+           <button class="filter-btn" onclick="filterDestinations('all')"><b>All</b></button>
+       </div>
+       
+       <div class="video-button">
+           <video autoplay loop muted class="video-bg">
+               <source src="country/beach.mp4" type="video/mp4">
+             
+           </video>
+           <button class="filter-btn" onclick="filterDestinations('beach')"><b>Beach</b></button>
+       </div>
+       
+       <div class="video-button">
+           <video autoplay loop muted class="video-bg">
+               <source src="country/cityy.mp4" type="video/mp4">
+              
+           </video>
+           <button class="filter-btn" onclick="filterDestinations('city')"><b>City</b></button>
+       </div>
+       
+       <div class="video-button">
+           <video autoplay loop muted class="video-bg">
+               <source src="country/hills2.mp4" type="video/mp4">
+             
+           </video>
+           <button class="filter-btn" onclick="filterDestinations('adventure')"><b>Adventure<b></button>
+       </div>
+   </div>
+   
+  
+    <div class="destinations">
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/country8.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Addu City,Maldives</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/country1.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Paris,France</span>
+          </div>
+      </div>
+      </div>
+  
+
+
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/blackforest.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span> Black Forest, Germany</span>
+          </div>
+      </div>
+      </div>     
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/country5.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Honolulu,Hawaii</span>
+          </div>
+      </div>
+      </div>
+
+
+
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/london.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>London , England</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/morocco.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Sahara Desert , Morocco</span>
+          </div>
+      </div>
+      </div>  
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/anse_source.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Anse source d'argent</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/new_york.ong.jpg" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>New York,England</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/milford.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Milford Track, New Zealand</span>
+          </div>
+      </div>
+      </div>  
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/tulum.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Tulum , Mexico</span>
+          </div>
+      </div>
+      </div>
+
+      
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/rome.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Rome, Italy</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/victoria_falls.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Victoria Falls,Zimbabwe</span>
+          </div>
+      </div>
+      </div>  
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/seychelles.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Seychelles, East Africa</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/amsterdam.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Amsterdam, Netherlands</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/switzerland.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Verzasca Bridge, Switzerland</span>
+          </div>
+      </div>
+      </div>  
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/mauritius.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Mauritius , Indian Ocean</span>
+          </div>
+      </div>
+      </div>
+  
+
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/sydney.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Sydney, Australia</span>
+          </div>
+      </div>
+      </div>
+
+      
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/tara_river.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Tara River, Montenegro </span>
+          </div>
+      </div>
+      </div>  
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/white_heaven.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>White Heaven, Queensland</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/jaipur.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Jaipur,India</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/costa_rica.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Rio Pacuare, Costa Rica</span>
+          </div>
+      </div>
+      </div>  
+  
+  
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/bali.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Bali, Indonesia</span>
+          </div>
+      </div>
+      </div>
+
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/barcelona.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Barcelona, Spain</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/maya_bay.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Maya Bay,Thailand</span>
+          </div>
+      </div>
+      </div>
+  
+  
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/machu_pichu.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Machu Pichu</span>
+          </div>
+      </div>
+      </div>
+
+      
+
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/annapurna.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Annapurna Circuit,Nepal</span>
+          </div>
+      </div>
+      </div>  
+
+      <div class="destination adventure">
+        <div class="country_card">
+          <img src="country/skaftafell.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Skaftafell National Park,Iceland</span>
+          </div>
+      </div>
+      </div>
+
+  
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/country2.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Santorini,Greece</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="destination beach">
+        <div class="country_card">
+          <img src="country/waikiki.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Waikiki Beach, United States</span>
+          </div>
+      </div>
+      </div>
+  
+      <div class="destination city">
+        <div class="country_card">
+          <img src="country/tokyo.png" alt="Paris" style="height: 200px; width: 200px;">
+          <div class="country_name">
+              <i class='bx bx-map'></i>
+              <span>Tokyo,Japan</span>
+          </div>
+      </div>
+      </div>
+    </div>
+  
+</section>
+
+
+<section class="call-to-action">
+  <h1>Ready to Start Your Adventure?</h1>
+  <h2>Contact us for a personalized travel itinerary or book a package today.</h2>
+  <div class="buttons">
+    <a href="mailto:ashimakamboj27@gmail.com" class="button">Contact Us</a>
+    <a href="package.html" class="button">Book a Package</a>
+  </div>
+  <div class="social">
+    <p><b>Share this post:</b></p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/sharer.php?u=your_blog_url" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20travel%20blog%20post:%20&url=your_blog_url" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=your_blog_url&title=Your%20Blog%20Post%Title&summary=A%20brief%20description%20of%20your%20blog%post" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+  <center>
+  <div class="slide-container">
+    <div class="slide-content">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-M_BxjSoCvLnNRwp9kwIsIgDHTvY-UODFlQ&s" alt="" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">This site helped me find the perfect vacation spot with ease! The recommendations were spot-on, and I had the best time exploring new places.</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR69DitzgMETA63PxD5LThSsd8pUCaczLFsgQ&s" alt="" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Jessica</h2>
+                    <p class="description">Thanks to this site, I discovered hidden gems I wouldn’t have found otherwise. It made planning my entire trip smooth and enjoyable!</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="https://media.istockphoto.com/id/1487992137/photo/portrait-profile-beautiful-latin-woman-athlete-hiker-on-a-mountain-with-trekking-poles.jpg?s=612x612&w=0&k=20&c=c44puZfHDSUm9VWxbqr5g29SJ49wYRGTDS-_Mm8umQM=" alt="" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Emilia Clark</h2>
+                    <p class="description">I was struggling to plan my trip, but this site made everything so simple. It gave me great suggestions, and I ended up discovering  new places.</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<h2><b>Love what we do? Let us know! Your feedback can inspire others</b></h2>
+<div class="star-container">
+  <div class="star-widget">
+      <input type="radio" name="rate" id="rate-5" required>
+      <label for="rate-5" class="fa fa-star"></label>
+      <input type="radio" name="rate" id="rate-4" required>
+      <label for="rate-4" class="fa fa-star"></label>
+      <input type="radio" name="rate" id="rate-3" required>
+      <label for="rate-3" class="fa fa-star"></label>
+      <input type="radio" name="rate" id="rate-2" required>
+      <label for="rate-2" class="fa fa-star"></label>
+      <input type="radio" name="rate" id="rate-1" required>
+      <label for="rate-1" class="fa fa-star"></label>
+  </div>
+  <form action="#" onsubmit="showPopup(event)">
+      <div class="textarea">
+          <textarea cols="30" placeholder="Describe your experience." required></textarea>
+      </div>
+      <div class="btn">
+          <button type="submit">Post</button>
+      </div>
+  </form>
+</div>
+</center>
+</section>
+<script>
+    const stars = document.querySelectorAll('.star-widget input');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                stars.forEach((s, i) => {
+                    s.nextElementSibling.style.color = i <= index ? 'gold' : 'grey';
+                });
+            });
+        });
+
+    function showPopup(event) {
+    event.preventDefault();
+
+    const ratingSelected = document.querySelector('input[name="rate"]:checked');
+    const feedbackText = document.querySelector('textarea').value.trim();
+
+    if (!ratingSelected && !feedbackText) {
+        alert('Please select a star rating and fill out the feedback.');
+    } else if (!ratingSelected) {
+        alert('Please select a star rating.');
+    } else if (!feedbackText) {
+        alert('Please fill out the feedback.');
+    } else {
+        alert('Thank you for your feedback!');
+    }
+}
+
+function filterDestinations(type) {
+  const destinations = document.querySelectorAll('.destination');
+  
+  destinations.forEach(destination => {
+    if (type === 'all' || destination.classList.contains(type)) {
+      destination.style.display = 'block';
+    } else {
+      destination.style.display = 'none';
+    }
+  });
+}
+    
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

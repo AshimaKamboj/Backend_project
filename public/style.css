@@ -1,0 +1,133 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.package-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.package-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.package-card:hover {
+  transform: scale(1.03);
+}
+
+.package-card h2 {
+  font-size: 20px;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.package-card p {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+button.book-btn {
+  margin-top: 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button.book-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Popup booking form */
+.booking-form-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.booking-form-container.active {
+  display: block;
+}
+
+.booking-form-container h3 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.booking-form-container input,
+.booking-form-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.booking-form-container button {
+  width: 100%;
+  padding: 10px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.booking-form-container button:hover {
+  background: #219150;
+}
+
+.close-btn {
+  background: #e74c3c;
+  margin-top: 10px;
+}
+
+.close-btn:hover {
+  background: #c0392b;
+}
+
+/* Success Message Styling */
+.success-message {
+  text-align: center;
+  background: #dff0d8;
+  color: #3c763d;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 1px solid #d6e9c6;
+}
