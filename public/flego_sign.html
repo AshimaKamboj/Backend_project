@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In / Sign Up</title>
+  <link rel="stylesheet" href="flego_sign_css.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Login Section -->
+    <div id="login-form-container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="input-group">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" required />
+        </div>
+        <div class="input-group">
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <div class="error-message" id="error-login"></div>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="javascript:void(0)" id="signup-link">Sign Up</a></p>
+    </div>
+
+    <!-- Sign Up Section -->
+    <div id="signup-form-container" style="display: none;">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <div class="input-group">
+          <label for="signup-name">Name:</label>
+          <input type="text" id="signup-name" required />
+        </div>
+        <div class="input-group">
+          <label for="signup-email">Email:</label>
+          <input type="email" id="signup-email" required />
+        </div>
+        <div class="input-group">
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" required />
+        </div>
+        <div class="input-group">
+          <label for="signup-role">Role:</label>
+          <select id="signup-role" required>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+            <option value="editor">Editor</option>
+          </select>
+        </div>
+        <div class="error-message" id="error-signup"></div>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="javascript:void(0)" id="login-link">Login</a></p>
+    </div>
+  </div>
+
+  <script src="flego_sign_js.js"></script>
+</body>
+</html>
